@@ -22,13 +22,17 @@ function checkSchedule(){
     } else {
         addTaskBlock.style.display = "none";
     }
-
 }
 
 
+// ADD EVENT LISTENERS TO SELECT ELEMENTS
+dateInput.addEventListener("change", checkSchedule);
+timeInput.addEventListener("change", checkSchedule);
 
 
 
+// ARRAY TO CONVERT DAY NUMBER TO DAY NAME
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
 
