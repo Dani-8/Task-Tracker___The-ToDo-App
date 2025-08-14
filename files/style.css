@@ -44,7 +44,7 @@ body{
     overflow-y: scroll;
 }
 .divider{
-    background-color: black;
+    background-color: rgb(236, 236, 236);
     height: 90%;
     width: 1px;
     position: relative;
@@ -128,7 +128,17 @@ input, select{
 
 
 
-
+.del-btn{
+    background-color: rgb(254, 92, 92);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    width: 70px;
+    margin-top: 10px;
+    cursor: pointer;
+}   
 
 
 

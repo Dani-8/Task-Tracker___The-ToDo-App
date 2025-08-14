@@ -70,9 +70,22 @@ function addTask(date, day, time, task, desc){
     taskDiv.className = "task-info"
     taskDiv.innerHTML = `<h2>${task.slice(0,1).toUpperCase() + task.slice(1)}</h2> <p>${desc}</p> <span><strong>Date:</strong> ${day}, ${date} ---- <strong>Time:</strong> ${time}</span>`
 
-    newLi.appendChild(taskDiv);
-    taskList.appendChild(newLi);
 
+
+    const delListBTN = document.createElement("button")
+    delListBTN.className = "del-btn"
+    delListBTN.innerHTML = "Delete"
+
+    delListBTN.addEventListener("click", function(){
+        newLi.remove()
+    })
+    
+
+
+    newLi.appendChild(taskDiv);
+    taskDiv.appendChild(delListBTN)
+
+    taskList.appendChild(newLi);
 }
 
 
