@@ -18,7 +18,7 @@ const taskList = document.getElementById("task-list");
 // FUNCTION TO CHECK IF DATE & TIME ARE SELECTED!!!!
 function checkSchedule(){
     if(dateInput.value !== "" && timeInput.value !== ""){
-        addTaskBlock.style.display = "block";
+        addTaskBlock.style.display = "flex";
     } else {
         addTaskBlock.style.display = "none";
     }
@@ -35,7 +35,12 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 
 
+addBTN.addEventListener("click", function(){
+    let dateText = 
 
+
+
+})
 
 
 
