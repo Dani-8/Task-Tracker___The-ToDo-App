@@ -98,16 +98,19 @@ input, select{
 
 .task-list{
     list-style: none;
-    /* background-color: #78e67b; */
+}
+.task-list li{
+    margin-bottom: 10px;
 }
 .task-list li div{
-    background-color: #dcdcdc;
+    background-color: #ebebeb;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 
 .task-list h2{
     margin: 0;
