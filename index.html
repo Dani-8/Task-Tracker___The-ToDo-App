@@ -12,37 +12,44 @@
 
     <div class="container">
 
-        <div class="time-block">
-            <h2>Schedule a Time Block</h2>
+        <div class="input-section">
+            <div class="time-block">
+                <h2>Schedule a Time Block</h2>
 
-            <input type="date" id="date-input">
-            <select name="" id="time-input">
-                <option value="" disabled selected>Select Time</option>
+                <input type="date" id="date-input">
+                <select name="" id="time-input">
+                    <option value="" disabled selected>Select Time</option>
 
-                
-                <option value="9 AM - 11 AM">9 AM - 11 AM</option>
-                <option value="1 PM - 3 PM">1 PM - 3 PM</option>
-                <option value="4 PM - 6 PM">4 PM - 6 PM</option>
-                <option value="8 PM - 10 PM">8 PM - 10 PM</option>
-                <option value="10 PM - 12 AM">10 PM - 12 AM</option>
-            </select>
+                    
+                    <option value="9 AM - 11 AM">9 AM - 11 AM</option>
+                    <option value="1 PM - 3 PM">1 PM - 3 PM</option>
+                    <option value="4 PM - 6 PM">4 PM - 6 PM</option>
+                    <option value="8 PM - 10 PM">8 PM - 10 PM</option>
+                    <option value="10 PM - 12 AM">10 PM - 12 AM</option>
+                </select>
+            </div>
+
+            
+            <div class="add-task-block" id="add-task-block">
+                <h2>Add Task Block</h2>
+
+                <input type="text" id="task-input" placeholder="Task Title">
+                <input type="text" id="task-desc" placeholder="Task Description(Optional)">
+
+                <button class="add-btn" id="add-btn">Add Task</button>
+            </div>
         </div>
 
-        
-        <div class="add-task-block" id="add-task-block">
-            <h2>Add Task Block</h2>
+        <div class="divider"></div>
 
-            <input type="text" id="task-input" placeholder="Task Title">
-            <input type="text" id="task-desc" placeholder="Task Description">
+        <div class="list-section">
+            <ul class="task-list" id="task-list">
 
-            <button class="add-btn" id="add-btn">Add Task</button>
+            </ul>
         </div>
 
 
 
-        <ul class="task-list" id="task-list">
-
-        </ul>
     </div>
 
 

@@ -36,21 +36,44 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 
 addBTN.addEventListener("click", function(){
-    let dateText = 
+    let dateText = dateInput.value
+    let timeText = timeInput.value
+    let taskText = taskInput.value.trim();
+    let taskDescText = taskDesc.value.trim();
 
 
+    if(dateText !== "" && timeText !== "" && taskText !== ""){
+        // CREATE A DATE OBJECT FROM THE SELECTED DATE & TIME AND GET THE DAYNAME 
+        let taskDate = new Date(dateText)
+        let dayname = days[taskDate.getDay()]
 
+
+        addTask(dateText, dayname, timeText, taskText, taskDescText);
+
+        dateInput.value = ""
+        timeInput.value = ""
+        taskInput.value = ""
+        taskDesc.value = ""
+
+        checkSchedule()
+    }
 })
 
 
 
+// CREATE A FUNCTION TO ADD TASKS TO THE LIST 
+function addTask(date, day, time, task, desc){
 
+    const newLi = document.createElement("li");
 
+    const taskDiv = document.createElement("div");
+    taskDiv.className = "task-info"
+    taskDiv.innerHTML = `<h2>${task.slice(0,1).toUpperCase() + task.slice(1)}</h2> <p>${desc}</p> <span><strong>Date:</strong> ${day}, ${date} ---- <strong>Time:</strong> ${time}</span>`
 
+    newLi.appendChild(taskDiv);
+    taskList.appendChild(newLi);
 
-
-
-
+}
 
 
 
