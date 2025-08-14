@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+
+body{
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+}
+
+.container{
+    background-color: white;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.time-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+input, select{
+    width: calc(100%);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+
+.task-block{
+    display: none;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
