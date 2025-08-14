@@ -82,8 +82,11 @@ function addTask(date, day, time, task, desc){
     
 
 
+    
+
     newLi.appendChild(taskDiv);
     taskDiv.appendChild(delListBTN)
+
 
     taskList.appendChild(newLi);
 }
