@@ -30,7 +30,6 @@ dateInput.addEventListener("change", checkSchedule);
 timeInput.addEventListener("change", checkSchedule);
 
 
-
 // ARRAY TO CONVERT DAY NUMBER TO DAY NAME
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 

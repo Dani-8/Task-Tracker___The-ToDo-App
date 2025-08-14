@@ -48,10 +48,8 @@ input, select{
 }
 
 
-.task-block{
+#add-task-block{
     display: none;
-
-
 }
 
 
