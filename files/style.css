@@ -38,10 +38,14 @@ body{
     padding: 20px;
 }
 .list-section{
-    width: 50%;
     /* background-color: rgb(202, 173, 230); */
+    width: 50%;
     padding: 20px;
-    overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;    
 }
 .divider{
     background-color: rgb(236, 236, 236);
@@ -50,6 +54,9 @@ body{
     position: relative;
     top: 5%;
 }
+
+
+
 
 .time-block{
     display: flex;
@@ -96,16 +103,40 @@ input, select{
 }
 
 
+
+
+#clear-all{
+    display: none;
+}
+.clear-all{
+    background-color: rgb(254, 92, 92);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    margin: 10px ;
+    cursor: pointer;
+
+}
+
 .task-list{
     list-style: none;
+    overflow-y: scroll;
+    width: 100%;
 }
+
+
 .task-list li{
     margin-bottom: 10px;
-}
-.task-list li div{
+    display: flex;
     background-color: #ebebeb;
-    padding: 10px;
     border-radius: 10px;
+}
+.task-info{
+    width: 80%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -128,6 +159,31 @@ input, select{
 
 
 
+
+
+
+
+.btn-cont{
+    background-color: rgb(220, 220, 220);
+    border-radius: 10px;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.edit-btn{
+    background-color: rgb(21, 166, 244);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    width: 70px;
+    margin-top: 10px;
+    cursor: pointer;
+} 
 .del-btn{
     background-color: rgb(254, 92, 92);
     outline: none;

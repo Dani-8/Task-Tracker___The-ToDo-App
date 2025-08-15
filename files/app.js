@@ -13,6 +13,7 @@ const addBTN = document.getElementById("add-btn");
 
 const taskList = document.getElementById("task-list");
 
+const clearAllBTN = document.getElementById("clear-all")
 
 
 // FUNCTION TO CHECK IF DATE & TIME ARE SELECTED!!!!
@@ -61,9 +62,26 @@ addBTN.addEventListener("click", function(){
 
 
 
+clearAllBTN.addEventListener("click", function() {
+    taskList.innerHTML = ""
+    ClearButtonVisibility()
+})
+
+
+function ClearButtonVisibility(){
+    if(taskList.children.length > 0){
+        clearAllBTN.style.display = "block"
+    }else{
+        clearAllBTN.style.display = "none"
+    }
+
+}
+
+
+
 // CREATE A FUNCTION TO ADD TASKS TO THE LIST 
 function addTask(date, day, time, task, desc){
-
+    // 
     const newLi = document.createElement("li");
 
     const taskDiv = document.createElement("div");
@@ -72,23 +90,58 @@ function addTask(date, day, time, task, desc){
 
 
 
+
+    const btnCont = document.createElement("div")
+    btnCont.className = "btn-cont"
+
+
+    var editListBTN = document.createElement('button')
+    editListBTN.className = 'edit-btn'
+    editListBTN.innerText = 'Edit'
+
+    editListBTN.addEventListener("click", function(){
+        let newDate = prompt("Edit Date (YYYY-MM-DD):", date)
+        let newTime = prompt("Edit Time:", time)
+        let newTask = prompt("Edit Task:", task)
+        let newDesc = prompt("Edit Description:", desc)
+
+        if(newDate !== null && newDate.trim() !== "" && newTask !== null && newTask.trim() !== "" ){
+            let editedDate = new Date(newDate)
+            let editedDay = days[editedDate.getDay()]
+
+            taskDiv.innerHTML = `<h2>${newTask.slice(0,1).toUpperCase() + newTask.slice(1)}</h2> <p>${newDesc}</p> <span><strong>Date:</strong> ${editedDay}, ${newDate} ---- <strong>Time:</strong> ${newTime}</span>`
+            date = newDate
+            time = newTime
+            task = newTask
+            desc = newDesc
+        }
+    })
+
+    btnCont.appendChild(editListBTN)
+
+
     const delListBTN = document.createElement("button")
     delListBTN.className = "del-btn"
     delListBTN.innerHTML = "Delete"
 
     delListBTN.addEventListener("click", function(){
         newLi.remove()
+        ClearButtonVisibility()
+
     })
     
+    btnCont.appendChild(delListBTN)
 
 
     
 
     newLi.appendChild(taskDiv);
-    taskDiv.appendChild(delListBTN)
-
+    newLi.appendChild(btnCont)
 
     taskList.appendChild(newLi);
+
+    ClearButtonVisibility()
+
 }
 
 
