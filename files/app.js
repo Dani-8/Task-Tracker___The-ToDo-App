@@ -16,6 +16,8 @@ const taskList = document.getElementById("task-list");
 const clearAllBTN = document.getElementById("clear-all")
 
 
+
+
 // FUNCTION TO CHECK IF DATE & TIME ARE SELECTED!!!!
 function checkSchedule(){
     if(dateInput.value !== "" && timeInput.value !== ""){
@@ -35,7 +37,7 @@ timeInput.addEventListener("change", checkSchedule);
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
-
+// ADD TASK BTN
 addBTN.addEventListener("click", function(){
     let dateText = dateInput.value
     let timeText = timeInput.value
@@ -62,6 +64,7 @@ addBTN.addEventListener("click", function(){
 
 
 
+// DELETE ALL TASKS
 clearAllBTN.addEventListener("click", function() {
     taskList.innerHTML = ""
     ClearButtonVisibility()
@@ -90,15 +93,16 @@ function addTask(date, day, time, task, desc){
 
 
 
-
+    // EDIT & DELETE BUTTONS IN CONTAINER
     const btnCont = document.createElement("div")
     btnCont.className = "btn-cont"
 
-
+    // EDIT YOUR TASK BTN
     var editListBTN = document.createElement('button')
     editListBTN.className = 'edit-btn'
     editListBTN.innerText = 'Edit'
 
+    // TAKE NEW VALUES
     editListBTN.addEventListener("click", function(){
         let newDate = prompt("Edit Date (YYYY-MM-DD):", date)
         let newTime = prompt("Edit Time:", time)
@@ -120,6 +124,7 @@ function addTask(date, day, time, task, desc){
     btnCont.appendChild(editListBTN)
 
 
+    // DELETE ONE TASK BTN
     const delListBTN = document.createElement("button")
     delListBTN.className = "del-btn"
     delListBTN.innerHTML = "Delete"
@@ -135,6 +140,8 @@ function addTask(date, day, time, task, desc){
 
     
 
+
+    // PUT TASK_DIVs IN LI AND LI IN UL
     newLi.appendChild(taskDiv);
     newLi.appendChild(btnCont)
 
