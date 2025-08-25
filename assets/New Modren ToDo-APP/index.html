@@ -3,13 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modren ToDo-App</title>
+    <title>Modern To-Do App</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="assets/files/style.css">
 </head>
 <body>
     
-    <h2>WORKING ON IT!</h2>
+    <div class="app-container">
+
+        <!-- SIDEBAR/MENU -->
+        <div class="sidebar-cont">
+
+            <!-- MENU HEADING -->
+            <div class="menu-heading">
+                <span>Menu</span>
+                <span><i class="ri-menu-4-line"></i></span>
+            </div>
+            <!-- SEARCH BAR -->
+            <div class="search-bar">
+                <i class="ri-search-2-line"></i>
+                <input type="text" placeholder="Search Task">
+            </div>
+
+
+            <!-- TASK CATEGORIES -->
+            <div class="task-catg-cont">
+                <h3>TASKS</h3>
+
+                <ul class="task-catg" id="task-catg">
+                    <li class="task-list-with-number">
+                        <span>Upcoming</span>
+                        <span id>0</span>
+                    </li>
+                    <li class="task-list-with-number active">
+                        <span>Today</span>
+                        <span>0</span>
+                    </li>
+                    <li class="task-list-with-icon">
+                        <span><i class="ri-calendar-event-line"></i></span>
+                        <span>Calendar</span>
+                    </li>
+                    <li class="task-list-with-icon">
+                        <span><i class="ri-sticky-note-2-line"></i></span>
+                        <span>Sticky Wall</span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- LISTS CATEGORIES -->
+            <div class="list-catg-cont">
+                <h3>LISTS</h3>
+
+                <ul class="list-catg" id="list-catg">
+                    <li class="list-with-number">
+                        <span>All Lists</span>
+                        <span id>0</span>
+                    </li>
+                    <li class="list-with-number active">
+                        <div>
+                            <span class="small-circle personal"></span>
+                            <span>Personal</span>
+                        </div>
+                        <span>0</span>
+                    </li>
+                    <li class="list-with-number">
+                        <div>
+                            <span class="small-circle work"></span>
+                            <span>Work</span>
+                        </div>
+                            <span>0</span>
+                    </li>
+                    <li class="list-with-number">
+                        <div>
+                            <span class="small-circle fun"></span>
+                            <span>Fun</span>
+                        </div>
+                            <span>0</span>
+                    </li>
+                    <li class="list-with-number add-new-list" id="add-new-list">
+                        <span>
+                            <span><i class="ri-add-line"></i></span>
+                            <span>Add New List</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
 
     <script src="assets/files/app.js"></script>
 </body>
